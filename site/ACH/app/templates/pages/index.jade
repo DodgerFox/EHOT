@@ -1,0 +1,22 @@
+extends ../layouts/default
+
+block head
+
+block content
+	.wrapper
+		include ../blocks/header
+		.main
+			include ../blocks/language
+			include ../blocks/welcome
+			include ../blocks/works
+			include ../blocks/about
+		include ../blocks/footer
+
+
+	script(src="assets/scripts/libs/jquery/dist/jquery.min.js")
+	//- script(src='assets/scripts/libs/jquery-validation/dist/jquery.validate.min.js')
+	//- script(src='assets/scripts/libs/jquery-masked/jquery-masked.js')
+	script(src='assets/scripts/libs/wow/dist/wow.min.js')
+	script(src='assets/scripts/libs/slick/slick/slick.min.js')
+	script(src='assets/scripts/libs/swiper/dist/js/swiper.min.js')
+	script(src="assets/scripts/main.js")

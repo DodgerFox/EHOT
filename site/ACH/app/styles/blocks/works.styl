@@ -1,0 +1,137 @@
+.works
+	transform translateX(100%)
+	z-index 3
+	background-color #191919
+	transition 0.7s transform ease-in-out
+	padding-top 130px
+	&--open
+		transform translateX(0)
+	
+	&__nav
+		display flex
+		&-item
+			margin-right 57px
+			position relative
+			cursor pointer
+			color #5a5a5a
+			font-size 20px
+			letter-spacing 8.4px
+			font-weight 400
+			transition 0.3s color
+			&--active
+				color #e3e3e3
+			&:hover
+				color #e3e3e3
+			&:first-child
+				&:after
+					content ">"
+					position absolute
+					right -40px
+					top 2px
+					color #e3e3e3
+	
+	&__skills
+		display flex
+		padding-top 56px
+	
+	&__skill
+		margin-right 15px
+		width 56px
+		height 56px
+		border-radius 50%
+		background-color #e8e8e8
+		&:last-child
+			margin-right 0
+	
+	&__slider-wrap
+		margin-top 56px
+		margin-left -21px
+		margin-right -21px
+		flex()
+	
+	&-slide
+		width 33.333%
+		padding 21px
+		&__item
+			width 100%
+			height 230px
+			padding 33px
+
+.slide-item
+	display flex
+	flex-direction column
+	justify-content space-between
+	background-position center
+	background-repeat no-repeat
+	position relative
+	
+	&:before
+		content ''
+		background-color rgba(0, 0, 0, .0)
+		position absolute
+		left 0
+		top 0
+		right 0
+		bottom 0
+		transition 0.3s background-color
+		
+	&__text
+		color #ffffff
+		font-weight 700
+		font-size 22px
+		line-height 26px
+		opacity 0
+		transition 0.4s opacity
+		position relative
+		z-index 1
+	
+	&__buttons
+		width 100%
+		display flex
+		justify-content space-between
+		align-items center
+		position relative
+		z-index 1
+	
+	&__description
+		background-color #ae8c64
+		border-radius 17px
+		width 156px
+		height 34px
+		display flex
+		justify-content center
+		align-items center
+		color white
+		font-size 16px
+		font-weight 700
+		opacity 0
+		border 2px solid #ae8c64
+		transition 0.4s all
+		cursor pointer
+		&:hover
+			background-color transparent
+			color #ae8c64
+			
+	
+	&__link
+		width 52px
+		height 52px
+		background-color #ffffff
+		border-radius 50%
+		display flex
+		justify-content center
+		align-items center
+		opacity 0
+		transition 0.4s opacity
+	
+	&:hover
+		&:before
+			background-color rgba(0, 0, 0, .5)
+		.slide-item__text
+			opacity 1
+		
+		.slide-item__description
+			opacity 1
+		
+		.slide-item__link
+			opacity 1

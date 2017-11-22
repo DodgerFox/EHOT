@@ -1,0 +1,146 @@
+.welcome
+	width 100%
+	height 100vh
+	position fixed
+	top 0
+	left 0
+	/*background-color #1f1f1f*/
+	background-color #191919
+	display flex
+	flex-direction column
+	justify-content center
+	align-items center
+	//background-image url('../images/svg/bg-welcome.svg')
+	background-position top center
+	background-size cover
+	transform translateX(0)
+	transition 0.8s transform
+	display none
+	&--left
+		transform translateX(-100%)
+	&--right
+		transform translateX(100%)
+	
+	.box
+		display flex
+		justify-content center
+		align-items center
+		flex-direction column
+		height inherit
+		z-index 2
+	&__logo
+		display flex
+		flex-direction column
+		align-items center
+		&-circle
+			width 310px
+			height 309px
+			background-color #2d2d2d
+			box-shadow 0 1px 3px rgba(0, 0, 0, 0.35)
+			border-radius 50%
+			display flex
+			justify-content center
+			align-items center
+		&-text
+			text-transform uppercase
+			letter-spacing 18.48px
+			font-size 42px
+			color #ececec
+			margin-top 24px
+			text-align center
+	&__line
+		width 42px
+		position relative
+		&-line
+			width 42px
+			height 2px
+			background-color #ededed
+			margin-top 20px
+		&-circle
+			height 6px
+			width 6px
+			border-radius 50%
+			background-color #ededed
+			position absolute
+			left 18px
+			top 18px
+	&__text
+		color white
+		font-size 18px
+		font-family CenturyGothic
+		font-weight 400
+		text-transform uppercase
+		letter-spacing 7.04px
+		margin-top 16px
+	&__button
+		width 218px
+		height 48px
+		box-shadow 0 1px 3px rgba(0, 0, 0, 0.35)
+		border-radius 23px
+		background-color #8f7c55
+		margin-top 94px
+		font-size 16px
+		color white
+		font-weight 400
+		letter-spacing 3.2px
+		display flex
+		justify-content center
+		align-items center
+		padding-top 2px
+		cursor pointer
+		text-transform uppercase
+		font-family 'Corbel'
+		font-weight 400
+		t()
+		&:hover
+			box-shadow 0 0px 0px rgba(0, 0, 0, 0.35)
+			border 2px solid #8f7c55
+			background transparent
+			color #8f7c55
+			font-weight 400
+		&-under
+			font-family CenturyGothic
+			color white
+			font-size 12px
+			margin-top 14px
+			font-weight 100
+			letter-spacing 1px
+	&__nav
+		position absolute
+		top 0
+		left 0
+		right 0
+		bottom 0
+		display flex
+		justify-content space-between
+		align-items center
+		padding 0 200px
+		display none
+		z-index -1
+		&-item
+			display flex
+			align-items center
+			cursor pointer
+			t()
+			&:hover
+				transform translateX(20px)
+			&:first-child
+				&:hover
+					transform translateX(-20px)
+		&-text
+			color #ececec
+			letter-spacing 6px
+			text-transform uppercase
+			font-weight 400
+			font-size 22px
+			margin 0 14px
+	&__bg
+		position fixed
+		top 0
+		left 0
+		width 100%
+		height 100vh
+		&-svg
+			width 100%
+			height 100vh
+			display none
